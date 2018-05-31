@@ -8,10 +8,14 @@ namespace Gilazo.Fibonacci.Presentation
         public int Create(int number)
         {
             return new FibonacciNumber(
-                new AbsoluteNumber(
-                    new LoggedNumber(
-                        new Number(number)
+                new LoggedNumber(
+                    new AbsoluteNumber(
+                        new LoggedNumber(
+                            new Number(number)
+                            , num => Console.WriteLine($"Number is: {num}")
+                        )
                     )
+                    , num => Console.WriteLine($"Absolute number is: {num}")
                 )
             ).Value();
         }

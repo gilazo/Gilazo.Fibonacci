@@ -5,16 +5,18 @@ namespace Gilazo.Fibonacci.Application
     public sealed class LoggedNumber : INumber
     {
         private readonly INumber _number;
+        private readonly Action<int> _log;
 
-        public LoggedNumber(INumber number)
+        public LoggedNumber(INumber number, Action<int> log)
         {
             _number = number;
+            _log = log;
         }
 
         public int Value()
         {
             var number = _number.Value();
-            Console.WriteLine($"Number is {number}");
+            _log(number);
 
             return number;
         }
