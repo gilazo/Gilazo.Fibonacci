@@ -13,6 +13,7 @@ namespace Gilazo.Fibonacci.Presentation.Controllers
         }
 
         [HttpGet]
+        [Route("{number}")]
         public int Get(int number)
         {
             return _application.Fibonacci(number);
