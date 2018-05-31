@@ -11,9 +11,6 @@ namespace Gilazo.Fibonacci.Application
             _number = number;
         }
 
-        public int Value()
-        {
-            return _number;
-        }
+        public int Value() => _number;
     }
 }
