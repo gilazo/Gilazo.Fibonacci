@@ -7,7 +7,9 @@ namespace Gilazo.Fibonacci.Presentation
     {
         public int Create(int number)
         {
-            return new FibonacciNumber(number).Value();
+            return new FibonacciNumber(
+                new AbsoluteNumber(number)
+            ).Value();
         }
     }
 }

@@ -4,19 +4,20 @@ namespace Gilazo.Fibonacci.Application
 {
     public class FibonacciNumber : INumber
     {
-        private readonly int _number;
+        private readonly INumber _number;
 
-        public FibonacciNumber(int number)
+        public FibonacciNumber(INumber number)
         {
             _number = number;
         }
 
         public int Value()
         {
-            if (_number < 0)
-                throw new Exception($"Number cannot be negative: {_number}");
+            var number = _number.Value();
+            if (number < 0)
+                throw new Exception($"Number cannot be negative: {number}");
             
-            return Fibonacci(_number);
+            return Fibonacci(number);
         }
 
         public int Fibonacci(int number)
