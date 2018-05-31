@@ -1,8 +1,8 @@
 using System;
 
-namespace Gilazo.Fibonacci.Application.Tests
+namespace Gilazo.Fibonacci.Application
 {
-    public class Number : INumber
+    public sealed class Number : INumber
     {
         private readonly int _number;
 

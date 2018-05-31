@@ -2,7 +2,7 @@
 
 namespace Gilazo.Fibonacci.Application
 {
-    public class FibonacciNumber : INumber
+    public sealed class FibonacciNumber : INumber
     {
         private readonly INumber _number;
 

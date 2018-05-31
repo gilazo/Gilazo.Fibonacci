@@ -2,15 +2,15 @@ using System;
 
 namespace Gilazo.Fibonacci.Application
 {
-    public class AbsoluteNumber : INumber
+    public sealed class AbsoluteNumber : INumber
     {
-        private readonly int _number;
+        private readonly INumber _number;
         
-        public AbsoluteNumber(int number)
+        public AbsoluteNumber(INumber number)
         {
             _number = number;
         }
 
-        public int Value() => Math.Abs(_number);
+        public int Value() => Math.Abs(_number.Value());
     }
 }

@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Gilazo.Fibonacci.Application.Tests
 {
-    public class FibonacciNumberTests
+    public sealed class FibonacciNumberTests
     {
         [Fact]
         public void Number_Negative_1_Throws_Exception()
