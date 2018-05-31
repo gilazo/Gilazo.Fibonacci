@@ -5,7 +5,7 @@ namespace Gilazo.Fibonacci.Presentation
 {
     internal sealed class Application
     {
-        public int Create(int number)
+        public int Fibonacci(int number)
         {
             return new FibonacciNumber(
                 new LoggedNumber(
